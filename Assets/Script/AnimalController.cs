@@ -35,5 +35,11 @@ public class AnimalController : MonoBehaviour, IAnimalHit
         speed = 0f;
         animator.SetFloat("Speed_f", 0f);
         animator.SetBool("Eat_b",true);
+        Invoke("SetBool", 2f);
+    }
+
+    void SetBool()
+    {
+        animator.SetBool("Eat_b", false);
     }
 }

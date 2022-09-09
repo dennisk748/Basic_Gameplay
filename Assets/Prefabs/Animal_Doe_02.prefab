@@ -675,7 +675,7 @@ GameObject:
   - component: {fileID: 8739951597276736089}
   - component: {fileID: 8739951597269730573}
   - component: {fileID: 8739951595704926028}
-  - component: {fileID: 2194440605025533362}
+  - component: {fileID: 1243740959}
   m_Layer: 0
   m_Name: Animal_Doe_02
   m_TagString: Untagged
@@ -738,10 +738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf562c4c7ce79694c81e0d162875a7f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  animator: {fileID: 8739951597269730573}
---- !u!64 &2194440605025533362
-MeshCollider:
+  speed: 2
+--- !u!65 &1243740959
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -750,10 +749,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: 3751d6025630be542a1062112f2bcae5, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.11496359, y: 0.3087292, z: 0.34931323}
+  m_Center: {x: -0.0038412572, y: 0.16764273, z: 0.053478707}
 --- !u!1 &8739951597277031059
 GameObject:
   m_ObjectHideFlags: 0

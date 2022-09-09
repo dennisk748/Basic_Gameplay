@@ -6,8 +6,13 @@ public class ThroughFood : MonoBehaviour
 {
     public float speed;
     public float outerRange = 50f;
-    public Collider Collider;
-    
+    Rigidbody body;
+
+    private void Start()
+    {
+        body = GetComponent<Rigidbody>();   
+    }
+
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -16,13 +21,15 @@ public class ThroughFood : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        OnTriggerEnter(Collider);
     }
-    private void OnTriggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider other)
     {
         var hit = other.GetComponent<IAnimalHit>();
-        if(hit != null)
+        if (hit != null)
         {
+            speed = 0f;
+            body.useGravity = true;
             hit.AnimalHit();
         }
     }

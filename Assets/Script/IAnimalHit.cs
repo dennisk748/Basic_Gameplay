@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IAnimalHit 
 {
-    public void AnimalHit();
+    void AnimalHit();
 }
